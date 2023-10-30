@@ -7,8 +7,8 @@ function UserAvatar({
   image,
   className,
 }: {
-  name: string;
-  image: string;
+  name?: string;
+  image?: string;
   className?: string;
 }) {
   return (
@@ -16,7 +16,7 @@ function UserAvatar({
       {image && (
         <Image
           src={image}
-          alt={name}
+          alt={name || "User Name"}
           width={40}
           //   referrerPolicy="no-referrer"
           height={40}
