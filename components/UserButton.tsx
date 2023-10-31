@@ -15,6 +15,7 @@ import { signIn, signOut } from "next-auth/react";
 
 function UserButton({ session }: { session: Session | null }) {
   // Session
+  // Subscription list here
   if (!session)
     return (
       <Button variant={"outline"} onClick={() => signIn()}>
