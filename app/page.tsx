@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-
+import DemoGif from "@/images/landingPage/demo.gif";
 export default function Home() {
   return (
     <main className="">
@@ -27,14 +27,14 @@ export default function Home() {
               </h1>
 
               <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
-                Speak your language, and they will speak theirs
+                Speak your language, and they will speak theirs <br />
                 <span className="text-indigo-600 dark:text-indigo-500">
                   Let the AI handle translation
                 </span>
               </p>
               <div className="mt-10 flex items-center justify-center gap-x-6">
                 <Link
-                  href="/pricing"
+                  href="/chat"
                   className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white dark:text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                 >
                   Get Started
@@ -43,18 +43,17 @@ export default function Home() {
                   href="/pricing"
                   className="text-sm font-semibold leading-5 text-gray-900 dark:text-gray-300"
                 >
-                  View Pricing <span aria-hidden="true">*</span>
+                  View Pricing
                 </Link>
               </div>
             </div>
-            <div className="mt-16 flow-root sm:mt-24">
-              <div className="-m-2 rounded-xl bg-gray-900/5 p-2 ring-1 ring-inset ring-gray-900/10 lg:-m-4 lg:rounded02xl lg:p-4">
+            <div className=" mt-16 flow-root sm:mt-24">
+              <div className="-m-2 rounded-xl bg-gray-900/5 p-2 ring-1 ring-inset ring-gray-900/10 lg:-m-4 lg:rounded-2xl lg:p-4">
                 <Image
                   unoptimized
                   src={DemoGif}
                   alt="Chat"
-                  width={2432}
-                  height={1442}
+                  width={1280}
                   className="rounded-md shadow-2xl ring-1 ring-gray-900/10"
                 />
               </div>
