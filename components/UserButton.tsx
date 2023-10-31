@@ -22,22 +22,21 @@ function UserButton({ session }: { session: Session | null }) {
       </Button>
     );
   return (
-    <DropdownMenu>
-      <DropdownMenuTrigger>
-        <UserAvatar
-          name="Himanshu Verkiya"
-          image="https://avatars.githubusercontent.com/u/34170205?v=4"
-        />
-      </DropdownMenuTrigger>
-      <DropdownMenuContent>
-        <DropdownMenuLabel>My Account</DropdownMenuLabel>
-        <DropdownMenuSeparator />
-        <DropdownMenuItem>Profile</DropdownMenuItem>
-        <DropdownMenuItem>Billing</DropdownMenuItem>
-        <DropdownMenuItem>Team</DropdownMenuItem>
-        <DropdownMenuItem>Subscription</DropdownMenuItem>
-      </DropdownMenuContent>
-    </DropdownMenu>
+    session && (
+      <DropdownMenu>
+        <DropdownMenuTrigger>
+          <UserAvatar name={session.user?.name} image={session.user?.image} />
+        </DropdownMenuTrigger>
+        <DropdownMenuContent>
+          <DropdownMenuLabel>My Account</DropdownMenuLabel>
+          <DropdownMenuSeparator />
+          {/* <DropdownMenuItem>Profile</DropdownMenuItem>
+          <DropdownMenuItem>Billing</DropdownMenuItem>
+          <DropdownMenuItem>Team</DropdownMenuItem> */}
+          <DropdownMenuItem>Sign out</DropdownMenuItem>
+        </DropdownMenuContent>
+      </DropdownMenu>
+    )
   );
 }
 
