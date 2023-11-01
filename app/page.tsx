@@ -1,6 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import DemoGif from "@/images/landingPage/demo.gif";
+{
+  /** DIDN'T SIGN UP FOR FIREBASE BLAZE PLAN, NO STRIPE FUNCTIONALITY YET @2.33.50  and Translation API @2.44.00*/
+}
 export default function Home() {
   return (
     <main className="">
